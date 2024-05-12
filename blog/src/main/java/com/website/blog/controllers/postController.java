@@ -46,7 +46,7 @@ public class postController {
     private String path;
 
 //  CREATE
-   @PostMapping("/User/{userId}/Category/{categoryId}/posts")
+   @PostMapping("/user/{userId}/category/{categoryId}/posts")
    public ResponseEntity<postDto> createPost(
     @RequestBody postDto PostDto, 
     @PathVariable Integer userId,

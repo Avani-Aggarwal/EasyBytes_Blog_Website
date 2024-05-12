@@ -2,6 +2,7 @@ package com.website.blog.entities;
 
 import java.util.Date;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,6 +18,7 @@ import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class post {
@@ -36,11 +39,11 @@ public class post {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private category Category;
+    private category category;
     
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private user User;
+    private user user;
 
 
 
